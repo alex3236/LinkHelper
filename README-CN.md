@@ -38,3 +38,14 @@ https://example.org/
 
 3. **自动转换**  
    成功转换后文本将变为蓝色可点击链接
+
+## 配置
+
+你可以修改脚本中的常量以满足你的需求。
+
+```javascript
+const CLICK_TIMEOUT = 1000;
+const CLICK_THRESHOLD = 10;
+const URL_REGEX = /(https?:\/\/[^\s<]+|www\.[^\s<]+\.[^\s<]{2,})/gi;
+const STYLE = "color: #66CCFF; background: #163E64";
+```

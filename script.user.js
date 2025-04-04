@@ -2,7 +2,7 @@
 // @name                Link Helper - Triple Click Text to Link
 // @name:zh-CN          链接助手 - 三击自动转换
 // @namespace           http://tampermonkey.net/
-// @version             1.0
+// @version             1.1
 // @description         Convert text URLs to links on triple click
 // @description:zh-CN   三击将文本URL转换为可点击链接
 // @author              Alex3236
@@ -14,9 +14,12 @@
 (function() {
     'use strict';
 
-    let clicks = [];
     const CLICK_TIMEOUT = 1000;
     const CLICK_THRESHOLD = 10;
+    const URL_REGEX = /(https?:\/\/[^\s<]+|www\.[^\s<]+\.[^\s<]{2,})/gi;
+    const STYLE = "color: #66CCFF; background: #163E64";
+
+    let clicks = [];
 
     document.addEventListener('click', function(e) {
         const now = Date.now();
@@ -81,11 +84,10 @@
     }
 
     function findUrls(text) {
-        const urlRegex = /(https?:\/\/[^\s<]+|www\.[^\s<]+\.[^\s<]{2,})/gi;
         const matches = [];
         let match;
 
-        while ((match = urlRegex.exec(text)) !== null) {
+        while ((match = URL_REGEX.exec(text)) !== null) {
             matches.push({
                 start: match.index,
                 end: match.index + match[0].length,
@@ -108,7 +110,7 @@
             }
 
             const a = document.createElement('a');
-            a.style = "color: #66ccff; background: #163E64";
+            a.style = STYLE;
             a.href = match.url.startsWith('http') ? match.url : `http://${match.url}`;
             a.textContent = match.url;
             a.target = '_blank';

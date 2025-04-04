@@ -38,3 +38,14 @@ This script can help solve that problem. Simply triple-click rapidly on the plai
 
 3. **Automatic Conversion**  
    Once successful, the text will turn blue and become a clickable link
+
+## Configuration
+
+You may modify the constants in the script to suit your needs.
+
+```javascript
+const CLICK_TIMEOUT = 1000;
+const CLICK_THRESHOLD = 10;
+const URL_REGEX = /(https?:\/\/[^\s<]+|www\.[^\s<]+\.[^\s<]{2,})/gi;
+const STYLE = "color: #66CCFF; background: #163E64";
+```
