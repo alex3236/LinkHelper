@@ -1,6 +1,14 @@
 # 链接助手 - Triple Click Text to Link
 
-将网页中的纯文本URL转换为可点击链接的用户脚本，通过三次点击触发转换。
+你是否遇到过这样的情况：在浏览网页时，看到一个纯文本的URL，但它并不是一个可点击的链接？
+
+```plain
+就像这样：
+
+https://example.org/
+```
+
+此脚本可以帮助你解决这个问题。只需在文本URL上快速连续点击三次，它就会自动转换为可点击的链接。
 
 ![Screenshot](https://s2.loli.net/2025/04/04/sWSK4QmZAuXzYfj.gif)
 

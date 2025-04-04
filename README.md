@@ -1,6 +1,14 @@
 # Link Helper - Triple Click Text to Link
 
-A user script that converts plain text URLs on web pages into clickable links, triggered by three clicks.  
+Have you ever encountered a situation where you're browsing a webpage and spot a plain text URL that isn't clickable?
+
+```plain
+Like this:
+
+https://example.org/
+```
+
+This script can help solve that problem. Simply triple-click rapidly on the plain text URL, and it will automatically convert into a clickable link.
 
 ![Screenshot](https://s2.loli.net/2025/04/04/sWSK4QmZAuXzYfj.gif)
 
